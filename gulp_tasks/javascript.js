@@ -1,6 +1,8 @@
 // gulp_tasks/javascript.js
 
 const gulp = require('gulp')
+const connect = require('gulp-connect')
+
 const source = require('vinyl-source-stream')
 const sourcemaps = require('gulp-sourcemaps')
 const buffer = require('vinyl-buffer')
@@ -9,7 +11,6 @@ const babelify = require('babelify')
 const uglify = require('gulp-uglify')
 const log = require('fancy-log')
 const minify = require('gulp-babel-minify')
-const connect = require('gulp-connect')
 
 gulp.task('javascript-bundle', function () {
   // Create a bundle
@@ -47,5 +48,6 @@ gulp.task('javascript-es6', function () {
 gulp.task('javascript', ['javascript-bundle', 'javascript-es6'])
 
 gulp.task('javascript:watch', function () {
+  gulp.start('javascript')
   gulp.watch('../src/js/**/*.js', ['javascript'])
 })

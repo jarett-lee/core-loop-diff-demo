@@ -10,5 +10,6 @@ gulp.task('html', function () {
 })
 
 gulp.task('html:watch', function () {
+  gulp.start('html')
   gulp.watch('../src/index.html', ['html'])
 })
