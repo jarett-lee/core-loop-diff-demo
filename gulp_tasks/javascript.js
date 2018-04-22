@@ -9,6 +9,7 @@ const babelify = require('babelify')
 const uglify = require('gulp-uglify')
 const log = require('fancy-log')
 const minify = require('gulp-babel-minify')
+const connect = require('gulp-connect')
 
 gulp.task('javascript-bundle', function () {
   // Create a bundle
@@ -29,6 +30,7 @@ gulp.task('javascript-bundle', function () {
     .on('error', log.error)
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('../public'))
+    .pipe(connect.reload())
 })
 
 gulp.task('javascript-es6', function () {
@@ -39,6 +41,7 @@ gulp.task('javascript-es6', function () {
       }
     }))
     .pipe(gulp.dest('../public/js'))
+    .pipe(connect.reload())
 })
 
 gulp.task('javascript', ['javascript-bundle', 'javascript-es6'])
