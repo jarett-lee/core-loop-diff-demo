@@ -1,0 +1,11 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": "standard",
+  "rules": {
+    "prefer-const": "error",
+    "no-var": "error"
+  }
+}
