@@ -2,6 +2,7 @@
 
 const gulp = require('gulp')
 const connect = require('gulp-connect')
+const plumber = require('gulp-plumber')
 
 const source = require('vinyl-source-stream')
 const sourcemaps = require('gulp-sourcemaps')
@@ -11,6 +12,13 @@ const babelify = require('babelify')
 const uglify = require('gulp-uglify')
 const log = require('fancy-log')
 const minify = require('gulp-babel-minify')
+
+function errorHandler (err) {
+  log.error(err.message)
+  console.error()
+  console.error(err.codeFrame)
+  this.emit('end')
+}
 
 gulp.task('javascript-bundle', function () {
   // Create a bundle
@@ -23,12 +31,15 @@ gulp.task('javascript-bundle', function () {
   })
 
   return b.bundle()
+    .on('error', errorHandler)
     .pipe(source('bundle.js'))
+    .pipe(plumber({
+      errorHandler: errorHandler
+    }))
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
     // Add other gulp transformations (eg. uglify) to the pipeline here.
     .pipe(uglify())
-    .on('error', log.error)
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('../public'))
     .pipe(connect.reload())
@@ -36,6 +47,11 @@ gulp.task('javascript-bundle', function () {
 
 gulp.task('javascript-es6', function () {
   gulp.src('../src/js/**/*.js')
+    .pipe(plumber({
+      errorHandler: function () {
+        // ignore, the other function will handle it
+      }
+    }))
     .pipe(minify({
       mangle: {
         keepClassName: false

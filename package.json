@@ -39,6 +39,7 @@
     "gulp-connect": "^5.5.0",
     "gulp-debug": "^3.2.0",
     "gulp-hub": "^0.8.0",
+    "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",

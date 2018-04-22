@@ -16,3 +16,9 @@ https://github.com/gulpjs/gulp/blob/master/docs/recipes/split-tasks-across-multi
 I build JavaScript using Browserify, which requires a special recipe.
 
 https://github.com/gulpjs/gulp/blob/master/docs/recipes/browserify-transforms.md
+
+I prevent gulp from crashing when there is invalid JavaScript using the articles
+below. In particular, I use gulp-plumber and custom handlers.
+
+https://gist.github.com/shovon/c876f9760c6bc74c96b4
+https://scotch.io/tutorials/prevent-errors-from-crashing-gulp-watch

@@ -1,11 +1,14 @@
 // gulp_tasks/sass.js
 
 const gulp = require('gulp')
-const sass = require('gulp-sass')
 const connect = require('gulp-connect')
+const plumber = require('gulp-plumber')
+
+const sass = require('gulp-sass')
 
 gulp.task('sass', function () {
   gulp.src('../src/main.scss')
+    .pipe(plumber())
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(gulp.dest('../public'))
