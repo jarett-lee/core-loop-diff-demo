@@ -5,6 +5,7 @@ import generateRandomColor from './generate-random-color.js'
 export default class GameState {
   constructor () {
     this.balls = []
+    this.blocks = []
     this.width = 300
     this.height = 300
   }
@@ -22,5 +23,16 @@ export default class GameState {
     }
 
     this.balls.push(ball)
+  }
+  addBlock () {
+    const blockSize = 20
+
+    const block = {
+      x: Math.random() * (this.width - blockSize),
+      y: Math.random() * (this.height - blockSize),
+      width: blockSize
+    }
+
+    this.blocks.push(block)
   }
 }

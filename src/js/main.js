@@ -12,6 +12,7 @@ let accumulator = 0.0
 
 const state = new GameState()
 state.addBall()
+state.addBlock()
 
 const button = document.getElementById('button')
 let dot = 2
