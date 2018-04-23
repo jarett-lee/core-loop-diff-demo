@@ -7,6 +7,18 @@ https://gafferongames.com/post/fix_your_timestep/
 
 ## Rendering
 
+Generally try to keep the number of render requests under 3000, under the advice
+of personal testing and the following blog.
+
+| 131071 | 245 ms |
+|-------:|-------:|
+|  65535 | 122 ms |
+|  32767 |  55 ms |
+|  16383 |  26 ms |
+|   8191 |  13 ms |
+
+https://www.construct.net/blogs/construct-official-blog-1/html5-2d-gaming-performance-analysis-743
+
 My actors do not draw themselves.
 
 https://gamedev.stackexchange.com/questions/14133/should-actors-in-a-game-be-responsible-for-drawing-themselves
