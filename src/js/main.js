@@ -13,6 +13,15 @@ let accumulator = 0.0
 const state = new GameState()
 state.addBall()
 
+const button = document.getElementById('button')
+let dot = 2
+button.onclick = function () {
+  for (let i = 0; i < dot; i++) {
+    state.addBall()
+  }
+  dot *= 2
+}
+
 function main (newTime) {
   const frameTime = newTime - currentTime
   currentTime = newTime
