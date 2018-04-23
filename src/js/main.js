@@ -11,6 +11,7 @@ let currentTime
 let accumulator = 0.0
 
 const state = new GameState()
+state.addBall()
 
 function main (newTime) {
   const frameTime = newTime - currentTime
