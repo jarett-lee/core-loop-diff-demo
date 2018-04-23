@@ -5,7 +5,7 @@ import render from './render.js'
 import GameState from './game-state.js'
 
 let updateTime = 0.0
-const updateDelta = 10
+const updateDelta = 1000 / 60
 
 let currentTime
 let accumulator = 0.0
