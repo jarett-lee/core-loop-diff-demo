@@ -10,13 +10,14 @@ export default class GameState {
   }
   addBall () {
     const maxSpeed = 300
+    const ballRadius = 10
 
     const ball = {
-      x: Math.random() * this.width,
-      y: Math.random() * this.height,
+      x: Math.random() * (this.width - ballRadius),
+      y: Math.random() * (this.height - ballRadius),
       dx: (Math.random() * maxSpeed) - (maxSpeed / 2),
       dy: (Math.random() * maxSpeed) - (maxSpeed / 2),
-      width: 10,
+      width: ballRadius,
       color: generateRandomColor()
     }
 
