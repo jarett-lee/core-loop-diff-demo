@@ -1,4 +1,9 @@
 
+## Timestep
+
+I went to a blog to find some advice about my main loop.
+
+https://gafferongames.com/post/fix_your_timestep/
 
 ## Build System
 
