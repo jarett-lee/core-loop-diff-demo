@@ -33,3 +33,12 @@ below. In particular, I use gulp-plumber and custom handlers.
 
 https://gist.github.com/shovon/c876f9760c6bc74c96b4
 https://scotch.io/tutorials/prevent-errors-from-crashing-gulp-watch
+
+## Misc
+
+### Random colors
+
+I don't mind dark colors, so I use the basic RGB space.
+
+https://stackoverflow.com/questions/1484506/random-color-generator
+https://martin.ankerl.com/2009/12/09/how-to-create-random-colors-programmatically/
