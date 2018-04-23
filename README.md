@@ -5,6 +5,12 @@ I went to a blog to find some advice about my main loop.
 
 https://gafferongames.com/post/fix_your_timestep/
 
+## Rendering
+
+My actors do not draw themselves.
+
+https://gamedev.stackexchange.com/questions/14133/should-actors-in-a-game-be-responsible-for-drawing-themselves
+
 ## Build System
 
 I use gulp for my build system.
