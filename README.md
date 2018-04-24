@@ -1,4 +1,10 @@
 
+## Source
+
+The initial code is from early in my bounce-idle game project.
+
+https://github.com/jarett-lee/bounce-idle/tree/222191bf62a94cb3c1ebd83a20a92413c2b72534
+
 ## Timestep
 
 I went to a blog to find some advice about my main loop.

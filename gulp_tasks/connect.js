@@ -6,6 +6,7 @@ const connect = require('gulp-connect')
 gulp.task('connect', function () {
   connect.server({
     root: '../public',
-    livereload: true
+    livereload: true,
+    port: 8090
   })
 })
